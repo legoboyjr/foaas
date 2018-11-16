@@ -14,50 +14,55 @@ const FOAAS = isDev ? '/chainsaw/john/:Alexander' : 'http://foaas.com/chainsaw/:
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      modalIsOpen: false,
+    this.state = {
+      openModal: false,
       chainsaw: ''
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal(){
+  openModal() {
     axios.get(FOAAS)
-    .then(response => {
-      console.log(response.data)
-      const { message } = response.data;
-      this.setState({
-        modalOpen: true,
-        chainsaw: message
+      .then(response => {
+        const { message } = response.data;
+        this.setState({
+          openModal: true,
+          chainsaw: message
+        })
       })
-    })
   }
 
-  closeModal = () => {
-    this.setState({modalIsOpen: false});
+  closeModal() {
+    this.setState({ openModal: false });
+    console.log("jkghfgjhf")
   }
 
   render() {
     return (
       <div className="d-flex justify-content-center align-items-center bg-dark vh-100">
         <button className="d-flex w-25 " onClick={this.openModal}>
-              <img src={Cartoon} className="img-thumbnail" alt="..." />
+          <img src={Cartoon} className="img-thumbnail" alt="..." />
         </button>
         <Modal
           className="Modal__Bootstrap modal-dialog"
           closeTimeoutMS={150}
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.handleModalCloseRequest}>
-           <div className="d-flex justify-content-center h-100">
-          <main className="d-flex justify-content-center align-items-center vh-100 flex-grow-1">
-            <h2 className="bg-dark text-white">{this.state.chainsaw}</h2>
-          </main>
-         </div>
+          isOpen={this.state.openModal}>
+          <div className="modal-content">
+            <header className="d-flex justify-content-end modal-header">
+              <button className="btn btn-default" onClick={this.closeModal}>X</button>
+            </header>
+            <div className="d-flex justify-content-center h-100 modal-body">
+              <main className="d-flex justify-content-center align-items-center vh-100 flex-grow-1">
+                <h2 className="bg-dark text-white"> {this.state.chainsaw}</h2>
+              </main>
+            </div>
+          </div>
+
         </Modal>
       </div>
-          );
-        }
-      }
-      
-      export default App;
+    );
+  }
+}
+
+export default App;
