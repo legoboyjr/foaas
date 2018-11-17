@@ -1,7 +1,7 @@
 {
   "main.css": "/foaas/static/css/main.464524e7.chunk.css",
-  "main.js": "/foaas/static/js/main.b4f12c91.chunk.js",
-  "main.js.map": "/foaas/static/js/main.b4f12c91.chunk.js.map",
+  "main.js": "/foaas/static/js/main.3efa5d80.chunk.js",
+  "main.js.map": "/foaas/static/js/main.3efa5d80.chunk.js.map",
   "static/css/1.8066da10.chunk.css": "/foaas/static/css/1.8066da10.chunk.css",
   "static/js/1.b9188acb.chunk.js": "/foaas/static/js/1.b9188acb.chunk.js",
   "static/js/1.b9188acb.chunk.js.map": "/foaas/static/js/1.b9188acb.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/Cartoon.jpg": "/foaas/static/media/Cartoon.b825db6b.jpg",
   "static/css/main.464524e7.chunk.css.map": "/foaas/static/css/main.464524e7.chunk.css.map",
   "index.html": "/foaas/index.html",
-  "precache-manifest.e1854c5bc6d0c9a99b1ce7a55f249597.js": "/foaas/precache-manifest.e1854c5bc6d0c9a99b1ce7a55f249597.js",
+  "precache-manifest.3b3c9c0a7fee7feba3025a8fd18ad8cc.js": "/foaas/precache-manifest.3b3c9c0a7fee7feba3025a8fd18ad8cc.js",
   "service-worker.js": "/foaas/service-worker.js"
 }
