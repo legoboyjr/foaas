@@ -9,7 +9,19 @@ Modal.setAppElement(appElement);
 
 const isDev = process.env.NODE_ENV !== 'production';
 //FOAAS
-const FOAAS = isDev ? '/chainsaw/john/:Alexander' : 'https://foaas.com/chainsaw/:name/:from';
+
+
+const FOAAS = isDev ? 
+['/chainsaw/john/:Alexander',
+  '/cool/:from',
+  '/diabetes/:from',
+  '/family/:from',
+  '/flying/:from'] :
+  ['https://foaas.com/chainsaw/:name/:from',
+    'https://foaas.com/cool/:from',
+    'https://foaas.com/diabetes/:from',
+    'https://foaas.com/family/:from',
+    'https://foaas.com/flying/:from'];
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +35,8 @@ class App extends Component {
   }
 
   openModal() {
-    axios.get(FOAAS)
+    const url = FOAAS[Math.floor(Math.random()*FOAAS.length)];
+    axios.get(url)
       .then(response => {
         const { message } = response.data;
         this.setState({
