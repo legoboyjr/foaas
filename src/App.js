@@ -9,7 +9,7 @@ Modal.setAppElement(appElement);
 
 const isDev = process.env.NODE_ENV !== 'production';
 //FOAAS
-const FOAAS = isDev ? '/chainsaw/john/:Alexander' : 'http://foaas.com/chainsaw/:name/:from';
+const FOAAS = isDev ? '/chainsaw/john/:Alexander' : 'https://foaas.com/chainsaw/:name/:from';
 
 class App extends Component {
   constructor(props) {
