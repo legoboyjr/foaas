@@ -48,13 +48,13 @@ class App extends Component {
           className="Modal__Bootstrap modal-dialog"
           closeTimeoutMS={150}
           isOpen={this.state.openModal}>
-          <div className="modal-content">
+          <div className="modal-content bg-dark">
             <header className="d-flex justify-content-end modal-header">
               <button className="btn btn-default" onClick={this.closeModal}>X</button>
             </header>
             <div className="d-flex justify-content-center h-100 modal-body">
-              <main className="d-flex justify-content-center align-items-center vh-100 flex-grow-1">
-                <h2 className="bg-dark text-white"> {this.state.chainsaw}</h2>
+              <main className="d-flex justify-content-center align-items-center vh-100 flex-grow-1 text-white ">
+                <h2 className=""> {this.state.chainsaw}</h2>
               </main>
             </div>
           </div>
